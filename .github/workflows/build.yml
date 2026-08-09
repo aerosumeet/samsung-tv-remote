@@ -18,11 +18,11 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
-
+      # Step-by-step native build without caching dependencies
       - name: Build Debug APK
-        run: gradle assembleDebug
+        run: gradle assembleDebug --no-daemon
+        env:
+          ACTIONS_CACHE_URL: "" # Disables GitHub Actions cache fallback
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
