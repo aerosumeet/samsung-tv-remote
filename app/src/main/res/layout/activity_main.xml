@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#121212"
+    android:gravity="center_horizontal"
+    android:padding="24dp">
+
+    <!-- 1. Top Section: Power Button -->
+    <Button
+        android:id="@+id/btnPower"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="POWER"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#E53935"
+        android:layout_marginBottom="32dp" />
+
+    <!-- 2. Middle Section: Volume | Circular Navigation | Channel -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="32dp">
+
+        <!-- Volume Controls (Vertical) -->
+        <LinearLayout
+            android:layout_width="70dp"
+            android:layout_height="210dp"
+            android:orientation="vertical"
+            android:background="#1E1E1E"
+            android:padding="4dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnVolUp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="VOL +"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#2C2C2C" />
+
+            <Button
+                android:id="@+id/btnMute"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="MUTE"
+                android:textSize="11sp"
+                android:textColor="#FFB300"
+                android:backgroundTint="#2C2C2C" />
+
+            <Button
+                android:id="@+id/btnVolDown"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="VOL -"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#2C2C2C" />
+        </LinearLayout>
+
+        <!-- Circular Navigation Control -->
+        <RelativeLayout
+            android:layout_width="210dp"
+            android:layout_height="210dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="#1E1E1E">
+
+            <Button
+                android:id="@+id/btnNavUp"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="▲"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#333333" />
+
+            <Button
+                android:id="@+id/btnNavLeft"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="◀"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#333333" />
+
+            <Button
+                android:id="@+id/btnNavOk"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:text="OK"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#00897B" />
+
+            <Button
+                android:id="@+id/btnNavRight"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="▶"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#333333" />
+
+            <Button
+                android:id="@+id/btnNavDown"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="▼"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#333333" />
+        </RelativeLayout>
+
+        <!-- Channel Controls (Vertical) -->
+        <LinearLayout
+            android:layout_width="70dp"
+            android:layout_height="210dp"
+            android:orientation="vertical"
+            android:background="#1E1E1E"
+            android:padding="4dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnChUp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="CH +"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#2C2C2C" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btnChDown"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="CH -"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#2C2C2C" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 3. Third Row: Back and Exit Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="16dp"
+            android:text="BACK"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#424242" />
+
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:text="EXIT"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#D32F2F" />
+    </LinearLayout>
+
+</LinearLayout>
