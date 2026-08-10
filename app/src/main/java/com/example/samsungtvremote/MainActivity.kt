@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         bindIrButton(R.id.btnNavOk, SamsungIrEncoder.CMD_NAV_OK)
         bindIrButton(R.id.btnBack, SamsungIrEncoder.CMD_BACK)
         bindIrButton(R.id.btnExit, SamsungIrEncoder.CMD_EXIT)
+        bindIrButton(R.id.btnHome, SamsungIrEncoder.CMD_HOME)
     }
 
     private fun bindIrButton(buttonId: Int, command: Int) {
