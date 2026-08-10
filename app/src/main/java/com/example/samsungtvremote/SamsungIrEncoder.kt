@@ -15,8 +15,9 @@ object SamsungIrEncoder {
     const val CMD_NAV_LEFT = 0x65
     const val CMD_NAV_RIGHT = 0x62
     const val CMD_NAV_OK = 0x68
-    const val CMD_BACK = 0x58
-    const val CMD_EXIT = 0x2B
+    const val CMD_BACK = 0x58    // Return / Back key
+    const val CMD_EXIT = 0x1F    // Smart Hub Exit key (Updated from 0x2B)
+    const val CMD_HOME = 0x79    // Smart Hub / Home key
 
     fun buildPattern(commandByte: Int): IntArray {
         val customAddr1 = 0x07
